@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kumar Patil | DevOps & Spring Boot Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<style>
+
+:root{
+--bg:#0b1220;
+--card:#121a2b;
+--accent:#38bdf8;
+--accent2:#818cf8;
+--text:#e6edf3;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+background:var(--bg);
+color:var(--text);
+font-family:Inter, sans-serif;
+line-height:1.6;
+}
+
+section{padding:100px 10%}
+
+h1,h2,h3{font-weight:700}
+
+/* NAV */
+nav{
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+padding:12px 30px;
+border-radius:40px;
+display:flex;
+gap:25px;
+z-index:999;
+}
+
+nav a{
+text-decoration:none;
+color:var(--text);
+font-size:14px;
+}
+
+nav a:hover{color:var(--accent)}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:72px;
+background:linear-gradient(90deg,var(--accent),var(--accent2));
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{max-width:650px;margin-top:20px;opacity:.8}
+
+.badges{
+display:flex;gap:15px;margin-top:30px;flex-wrap:wrap;justify-content:center}
+
+.badge{
+background:var(--card);
+padding:10px 16px;
+border-radius:20px;
+font-size:14px;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+/* STORY */
+.story{
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+.story p{margin-top:20px;font-size:18px}
+
+/* SKILLS GRID */
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.skill{
+background:var(--card);
+padding:25px;
+border-radius:16px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:10px;
+transition:0.3s;
+}
+
+.skill i{
+font-size:32px;
+color:var(--accent);
+}
+
+.skill:hover{
+transform:translateY(-8px) scale(1.05);
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* PIPELINE */
+.pipeline{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+}
+
+.stage{
+background:var(--card);
+padding:20px 30px;
+border-radius:14px;
+text-align:center;
+min-width:160px;
+position:relative;
+}
+
+.stage::after{
+content:"→";
+position:absolute;
+right:-25px;
+top:50%;
+transform:translateY(-50%);
+font-size:20px;
+opacity:.5;
+}
+
+.stage:last-child::after{display:none}
+
+/* EXPERIENCE */
+.timeline{
+border-left:2px solid var(--accent);
+padding-left:30px;
+margin-top:40px;
+}
+
+.job{
+margin-bottom:40px;
+position:relative;
+}
+
+.job::before{
+content:"";
+width:12px;
+height:12px;
+background:var(--accent);
+border-radius:50%;
+position:absolute;
+left:-37px;
+top:6px;
+}
+
+.year{color:var(--accent);font-weight:600}
+
+/* PROJECTS */
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.project{
+background:var(--card);
+padding:25px;
+border-radius:16px;
+transition:0.3s;
+}
+
+.project:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,.5);
+}
+
+/* TERMINAL */
+.terminal{
+background:black;
+padding:25px;
+border-radius:12px;
+font-family:"JetBrains Mono";
+color:#00ff9c;
+margin-top:30px;
+}
+
+input{
+background:transparent;
+border:none;
+color:#00ff9c;
+outline:none;
+}
+
+footer{
+text-align:center;
+padding:60px 20px;
+opacity:.6
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#story">Story</a>
+<a href="#skills">Stack</a>
+<a href="#pipeline">Pipeline</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+</nav>
+
+<section class="hero">
+
+<h1>Kumar Patil</h1>
+<p>Spring Boot & DevOps Engineer building scalable microservices, cloud infrastructure and reliable CI/CD pipelines.</p>
+
+<div class="badges">
+<div class="badge"><i class="devicon-java-plain"></i> Java</div>
+<div class="badge"><i class="devicon-spring-plain"></i> Spring Boot</div>
+<div class="badge"><i class="devicon-docker-plain"></i> Docker</div>
+<div class="badge"><i class="devicon-kubernetes-plain"></i> Kubernetes</div>
+<div class="badge"><i class="devicon-amazonwebservices-original"></i> AWS</div>
+</div>
+
+</section>
+
+<section id="story">
+
+<div class="story">
+
+<h2>My Engineering Journey</h2>
+
+<p>
+I started as a Java developer building backend systems. Over time I became fascinated with how software runs in production — deployments, containers, infrastructure and reliability.
+</p>
+
+<p>
+Today I design and build systems end-to-end: Spring Boot microservices, event-driven architectures with Kafka, and automated DevOps pipelines running on Kubernetes and cloud platforms.
+</p>
+
+<p>
+My passion is creating platforms where developers can ship features faster while infrastructure runs reliably.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2>Tech Stack</h2>
+
+<div class="skills-grid">
+
+<div class="skill"><i class="devicon-java-plain"></i>Java</div>
+<div class="skill"><i class="devicon-spring-plain"></i>Spring Boot</div>
+<div class="skill"><i class="devicon-kafka-original"></i>Kafka</div>
+<div class="skill"><i class="devicon-docker-plain"></i>Docker</div>
+<div class="skill"><i class="devicon-kubernetes-plain"></i>Kubernetes</div>
+<div class="skill"><i class="devicon-amazonwebservices-original"></i>AWS</div>
+<div class="skill"><i class="devicon-terraform-plain"></i>Terraform</div>
+<div class="skill"><i class="devicon-gitlab-plain"></i>CI/CD</div>
+
+</div>
+
+</section>
+
+<section id="pipeline">
+
+<h2>How I Ship Software</h2>
+
+<div class="pipeline">
+
+<div class="stage">Code</div>
+<div class="stage">Build</div>
+<div class="stage">Test</div>
+<div class="stage">Docker</div>
+<div class="stage">Kubernetes</div>
+<div class="stage">Cloud</div>
+
+</div>
+
+</section>
+
+<section id="experience">
+
+<h2>Experience</h2>
+
+<div class="timeline">
+
+<div class="job">
+<div class="year">2022 — Present</div>
+<h3>Accenture</h3>
+<p>DevOps engineer managing Kubernetes clusters, CI/CD pipelines and cloud infrastructure.</p>
+</div>
+
+<div class="job">
+<div class="year">2021 — 2022</div>
+<h3>HCL Technologies</h3>
+<p>Infrastructure engineer building APIs and managing deployments.</p>
+</div>
+
+<div class="job">
+<div class="year">2019 — 2021</div>
+<h3>Bitwise</h3>
+<p>Java developer building enterprise backend systems.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2>Highlighted Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Kubernetes Deployment Automation</h3>
+<p>Helm based deployment pipelines for microservices infrastructure.</p>
+</div>
+
+<div class="project">
+<h3>Kafka Event Platform</h3>
+<p>Event-driven microservice architecture using Spring Boot and Kafka.</p>
+</div>
+
+<div class="project">
+<h3>CI/CD Automation</h3>
+<p>GitLab pipelines automating build, containerization and cluster deployments.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<section id="terminal">
+<h2>Interactive Terminal</h2>
+
+<div class="terminal">
+<div id="output" class="terminal-output"></div>
+
+<div class="terminal-input-line">
+<span class="prompt">dev@portfolio:~$</span>
+<input id="terminal-input" autocomplete="off" />
+</div>
+</div>
+
+</section>
+
+<footer>
+© 2026 Kumar Patil
+</footer>
+
+<script>
+
+const input = document.getElementById("terminal-input")
+const output = document.getElementById("output")
+
+const commands = {
+help:`Available commands:
+help
+about
+skills
+clear`,
+
+about:`DevOps + Spring Boot engineer
+Focused on backend scalability and cloud automation`,
+
+skills:`Java
+Spring Boot
+Docker
+Kubernetes
+AWS
+CI/CD`
+}
+
+function print(text){
+output.innerHTML += text + "\n"
+output.scrollTop = output.scrollHeight
+}
+
+function runCommand(cmd){
+
+if(cmd === "clear"){
+output.innerHTML = ""
+return
+}
+
+if(commands[cmd]){
+print(commands[cmd])
+}
+else{
+print("command not found: " + cmd)
+}
+}
+
+input.addEventListener("keydown",function(e){
+if(e.key === "Enter"){
+
+const command = input.value.trim()
+
+print("dev@portfolio:~$ " + command)
+
+runCommand(command)
+
+input.value = ""
+
+}
+})
+
+</script>
+</body>
+</html>
